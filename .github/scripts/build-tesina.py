@@ -9,15 +9,6 @@ from pathlib import Path
 
 def main():
     # ==========================================
-    # 1. LEGGI CONFIG.YML
-    # ==========================================
-    print("[*] Reading config.yml...")
-    with open('config.yml', 'r', encoding='utf-8') as f:
-        config = yaml.safe_load(f)
-    
-    tesina_data = config.get('tesina', {})
-
-    # ==========================================
     # 2. LEGGI IL RIASSUNTO (ABSTRACT) DA FILE
     # ==========================================
     print("[*] Reading abstract from RIASSUNTO.md...")
