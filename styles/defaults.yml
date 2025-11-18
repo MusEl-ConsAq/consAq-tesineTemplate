@@ -13,6 +13,4 @@ syntax-highlighting: tango
 
 filters:
   - pandoc-crossref
-
-lua-filters:
   - styles/multibib.lua
