@@ -9,7 +9,7 @@ from pathlib import Path
 
 def main():
     # ==========================================
-    # 2. LEGGI IL RIASSUNTO (ABSTRACT) DA FILE
+    # 1. LEGGI IL RIASSUNTO (ABSTRACT) DA FILE
     # ==========================================
     print("[*] Reading abstract from RIASSUNTO.md...")
     docs_dir = Path("docs/sezioni")
@@ -29,7 +29,7 @@ def main():
         print(f"    [WARN] {riassunto_file} not found. Using default text.")
 
     # ==========================================
-    # 3. TROVA E ORDINA I FILE DELLE SEZIONI
+    # 2. TROVA E ORDINA I FILE DELLE SEZIONI
     # ==========================================
     print("[*] Finding and sorting markdown section files...")
     if not docs_dir.exists():
@@ -42,7 +42,7 @@ def main():
         print(f"[WARN] No section .md files found in {docs_dir} (excluding RIASSUNTO.md).")
     
     # ==============================================================================
-    # 3.5. VERSIONE FINALE: SCANSIONE AUTOMATICA E GESTIONE CONFLITTI NUMERATA
+    # 2.5. VERSIONE FINALE: SCANSIONE AUTOMATICA E GESTIONE CONFLITTI NUMERATA
     # ==============================================================================
     print("[*] Automatically scanning for bibliography files in docs/...")
     bib_dir = Path("docs")
@@ -80,7 +80,7 @@ def main():
 
     
     # ==========================================
-    # 4. CREA README.MD CON FRONTMATTER E CONTENUTI
+    # 3. CREA README.MD CON FRONTMATTER E CONTENUTI
     # ==========================================
     print("[*] Creating README.md with full frontmatter...")
     with open("README.md", "w", encoding='utf-8') as out:
@@ -98,7 +98,7 @@ def main():
             out.write(file.read_text(encoding='utf-8') + "\n\n")
         
         # =================================================================
-        # 5. AGGIUNGI I DIV PER LE BIBLIOGRAFIE MULTIPLE
+        # 4. AGGIUNGI I DIV PER LE BIBLIOGRAFIE MULTIPLE
         # =================================================================
         print("[*] Appending bibliography placeholder divs...")
         if found_bib_files:
