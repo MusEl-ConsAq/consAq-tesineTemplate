@@ -26,7 +26,7 @@ Per citare un'opera in modo generico:
 La sintesi digitale è stata ampiamente studiata `[@delduca1987]`.
 ```
 
-**Risultato:** La sintesi digitale è stata ampiamente studiata (Del Duca 1987).
+**Risultato:** La sintesi digitale è stata ampiamente studiata [@delduca1987].
 
 ## 1.2 Citazioni multiple
 
